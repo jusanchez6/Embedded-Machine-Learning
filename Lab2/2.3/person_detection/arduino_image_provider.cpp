@@ -1,53 +1,62 @@
-/* Copyright 2019 The TensorFlow Authors. All Rights Reserved.
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-  http://www.apache.org/licenses/LICENSE-2.0
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-  ==============================================================================*/
-
 #include "image_provider.h"
 
 #ifndef ARDUINO_EXCLUDE_CODE
 
 #include "Arduino.h"
 #include <TinyMLShield.h>
+#include <algorithm>  // For std::min and std::max
+#include <cmath>      // For roundf
 
-// Get an image from the camera module
 TfLiteStatus GetImage(tflite::ErrorReporter* error_reporter, int image_width,
-                      int image_height, int channels, int8_t* image_data) {
-
-  byte data[176 * 144]; // Receiving QCIF grayscale from camera = 176 * 144 * 1
+                      int image_height, int channels, int8_t* image_data,
+                      float input_scale, int input_zero_point) {
+  const int kCameraWidth = 176;
+  const int kCameraHeight = 144;
 
   static bool g_is_camera_initialized = false;
-  static bool serial_is_initialized = false;
 
-  // Initialize camera if necessary
   if (!g_is_camera_initialized) {
-    if (!Camera.begin(QCIF, GRAYSCALE, 5, OV7675)) {
+    if (!Camera.begin(QCIF, GRAYSCALE, 5, OV7670)) {
       TF_LITE_REPORT_ERROR(error_reporter, "Failed to initialize camera!");
       return kTfLiteError;
     }
     g_is_camera_initialized = true;
+
+    Serial.begin(115200);
+    while (!Serial);
   }
 
-  // Read camera data
+  uint8_t data[kCameraWidth * kCameraHeight];
   Camera.readFrame(data);
 
-  int min_x = (176 - 96) / 2;
-  int min_y = (144 - 96) / 2;
-  int index = 0;
+  int crop_x = (kCameraWidth - image_width) / 2;
+  int crop_y = (kCameraHeight - image_height) / 2;
 
-  // Crop 96x96 image. This lowers FOV, ideally we would downsample but this is simpler. 
-  for (int y = min_y; y < min_y + 96; y++) {
-    for (int x = min_x; x < min_x + 96; x++) {
-      image_data[index++] = static_cast<int8_t>(data[(y * 176) + x] - 128); // convert TF input image to signed 8-bit
+  // Optional: send header bytes
+  Serial.write(0xAA);
+  Serial.write(0x55);
+
+  for (int y = 0; y < image_height; ++y) {
+    for (int x = 0; x < image_width; ++x) {
+      int src_index = (crop_y + y) * kCameraWidth + (crop_x + x);
+      int dst_index = y * image_width + x;
+
+      uint8_t pixel = data[src_index];
+
+      // Send raw grayscale value (0–255) over Serial
+      Serial.write(pixel);
+
+      // Quantize for model
+      float normalized = static_cast<float>(pixel) / 255.0f;
+      int32_t quantized = static_cast<int32_t>(roundf(normalized / input_scale + input_zero_point));
+      quantized = std::min<int32_t>(127, std::max<int32_t>(-128, quantized));
+      image_data[dst_index] = static_cast<int8_t>(quantized);
     }
   }
+
+  // Optional: send end bytes
+  Serial.write(0x55);
+  Serial.write(0xAA);
 
   return kTfLiteOk;
 }

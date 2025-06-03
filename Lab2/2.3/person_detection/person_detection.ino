@@ -45,7 +45,7 @@ TfLiteTensor* input = nullptr;
 // signed value.
 
 // An area of memory to use for input, output, and intermediate arrays.
-constexpr int kTensorArenaSize = 200 * 1024;
+constexpr int kTensorArenaSize = 100 * 1024;
 static uint8_t tensor_arena[kTensorArenaSize];
 }  // namespace
 
@@ -77,19 +77,19 @@ void setup() {
   //
   // tflite::AllOpsResolver resolver;
   // NOLINTNEXTLINE(runtime-global-variables)
-  static tflite::MicroMutableOpResolver<5> resolver;
-  resolver.AddConv2D();
-  resolver.AddDepthwiseConv2D();
-  resolver.AddAveragePool2D();
-  resolver.AddSoftmax();
-  resolver.AddReshape();
-  resolver.AddMaxPool2D();
+  static tflite::MicroMutableOpResolver<5> micro_op_resolver;
+  micro_op_resolver.AddConv2D();
+  micro_op_resolver.AddMaxPool2D();
+  micro_op_resolver.AddReshape();
+  micro_op_resolver.AddFullyConnected();
+  micro_op_resolver.AddSoftmax();
+
 
 
   // Build an interpreter to run the model with.
   // NOLINTNEXTLINE(runtime-global-variables)
   static tflite::MicroInterpreter static_interpreter(
-      model, resolver, tensor_arena, kTensorArenaSize, error_reporter);
+      model, micro_op_resolver, tensor_arena, kTensorArenaSize, error_reporter);
   interpreter = &static_interpreter;
 
   // Allocate memory from the tensor_arena for the model's tensors.
@@ -105,32 +105,38 @@ void setup() {
 
 // The name of this function is important for Arduino compatibility.
 void loop() {
-  // Get image from provider.
-  if (kTfLiteOk != GetImage(error_reporter, kNumCols, kNumRows, kNumChannels,
-                            input->data.int8)) {
-    TF_LITE_REPORT_ERROR(error_reporter, "Image capture failed.");
+  // Retrieve quantization parameters from the input tensor
+  float input_scale = 1.0f;
+  int input_zero_point = 0;
+  if (input->quantization.type == kTfLiteAffineQuantization) {
+    auto* quant_params = static_cast<TfLiteAffineQuantization*>(input->quantization.params);
+    if (quant_params->scale && quant_params->zero_point) {
+      input_scale = quant_params->scale->data[0];
+      input_zero_point = quant_params->zero_point->data[0];
+    }
   }
 
-  TF_LITE_REPORT_ERROR(error_reporter, "Input tensor shape: %d %d %d", 
-                      input->dims->data[1],  // height
-                      input->dims->data[2],  // width
-                      input->dims->data[3]); // channels
+  // Get image from provider with quantization parameters
+  if (kTfLiteOk != GetImage(error_reporter, kNumCols, kNumRows, kNumChannels,
+                            input->data.int8, input_scale, input_zero_point)) {
+    TF_LITE_REPORT_ERROR(error_reporter, "Image capture failed.");
+    return;
+  }
 
-  // // Run the model on this input and make sure it succeeds.
+  // Run the model on this input and make sure it succeeds.
   if (kTfLiteOk != interpreter->Invoke()) {
     TF_LITE_REPORT_ERROR(error_reporter, "Invoke failed.");
+    return;
   }
 
   TfLiteTensor* output = interpreter->output(0);
-TF_LITE_REPORT_ERROR(error_reporter, "Output tensor type: %d", output->type);
-
-  TfLiteTensor* output = interpreter->output(0);
-  // print the output
-  TF_LITE_REPORT_ERROR(error_reporter, "Output: %d %d %d", output->data.int8[0], output->data.int8[1], output->data.int8[2]);
 
 
-  // // Process the inference results.
-  // int8_t person_score = output->data.uint8[kPersonIndex];
-  // int8_t no_person_score = output->data.uint8[kNotAPersonIndex];
-  // RespondToDetection(error_reporter, person_score, no_person_score);
+  // Process the inference results.
+  int8_t paper_score = output->data.int8[kPaperIndex];
+  int8_t rock_score = output->data.int8[kRockIndex];
+  int8_t scissors_score = output->data.int8[kScissorsIndex];
+
+  RespondToDetection(error_reporter, paper_score, rock_score, scissors_score);
 }
+

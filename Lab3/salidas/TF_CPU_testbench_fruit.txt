@@ -1,0 +1,55 @@
+Starting slrum job
+2025-07-14 16:37:22.662456: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-14 16:37:27.303996: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-14 16:37:28.000962: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2025-07-14 16:37:28.016400: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:28.016566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:00:00.0 name: NVIDIA Tegra X1 computeCapability: 5.3
+coreClock: 0.9216GHz coreCount: 1 deviceMemorySize: 3.87GiB deviceMemoryBandwidth: 194.55MiB/s
+2025-07-14 16:37:28.016617: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-14 16:37:28.022631: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2025-07-14 16:37:28.022839: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2025-07-14 16:37:28.026516: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2025-07-14 16:37:28.027468: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2025-07-14 16:37:28.031551: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2025-07-14 16:37:28.034651: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2025-07-14 16:37:28.035361: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2025-07-14 16:37:28.035707: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:28.036024: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:28.036100: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2025-07-14 16:37:28.036392: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-07-14 16:37:28.037665: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:28.037798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:00:00.0 name: NVIDIA Tegra X1 computeCapability: 5.3
+coreClock: 0.9216GHz coreCount: 1 deviceMemorySize: 3.87GiB deviceMemoryBandwidth: 194.55MiB/s
+2025-07-14 16:37:28.037849: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-14 16:37:28.038078: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2025-07-14 16:37:28.038147: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2025-07-14 16:37:28.038198: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2025-07-14 16:37:28.038349: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2025-07-14 16:37:28.038414: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2025-07-14 16:37:28.038527: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2025-07-14 16:37:28.038635: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2025-07-14 16:37:28.038947: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:28.039217: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:28.039287: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2025-07-14 16:37:35.271880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2025-07-14 16:37:35.271957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2025-07-14 16:37:35.271985: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2025-07-14 16:37:35.272480: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:35.275683: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:35.276022: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-14 16:37:35.276208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 683 MB memory) -> physical GPU (device: 0, name: NVIDIA Tegra X1, pci bus id: 0000:00:00.0, compute capability: 5.3)
+2025-07-14 16:37:35.276903: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-07-14 16:38:14.557528: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 375840000 exceeds 10% of free system memory.
+2025-07-14 16:38:15.070066: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2025-07-14 16:38:15.071164: W tensorflow/core/platform/profile_utils/cpu_utils.cc:116] Failed to find bogomips or clock in /proc/cpuinfo; cannot determine CPU frequency
+✅ Cargadas 3132 imágenes de prueba
+
+Inferencia completada sobre 3132 imágenes
+Tiempo total: 126245.0013 ms
+Tiempo promedio por imagen: 40.308 ms
+Memoria pico: 413.44 MB
+Precisión: 0.03%
+Energía estimada: 631.225 J (con 5.0W)
+Finished slrum job

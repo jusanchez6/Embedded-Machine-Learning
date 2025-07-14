@@ -1,0 +1,12 @@
+Starting slrum job
+2025-07-13 18:18:05.027419: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 18:18:09.187435: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+✅ Cargadas 3132 imágenes de prueba
+
+✅ Inferencia completada sobre 3132 imágenes
+⏱️  Tiempo total: 80.140 s
+⏱️  Tiempo promedio por imagen: 25.588 ms
+📈 Memoria pico: 0.11 MB
+🎯 Precisión en test set: 7.38%
+⚡ Energía estimada: 400.701 J (con 5.0W)
+Finished slrum job

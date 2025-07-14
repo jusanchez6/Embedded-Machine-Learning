@@ -1,0 +1,147 @@
+Starting slrum job
+2025-07-13 18:46:14.539718: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 18:46:18.781537: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 18:46:19.509815: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2025-07-13 18:46:19.525862: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:19.526017: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:00:00.0 name: NVIDIA Tegra X1 computeCapability: 5.3
+coreClock: 0.9216GHz coreCount: 1 deviceMemorySize: 3.87GiB deviceMemoryBandwidth: 194.55MiB/s
+2025-07-13 18:46:19.526066: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 18:46:19.530126: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2025-07-13 18:46:19.530334: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2025-07-13 18:46:19.533575: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2025-07-13 18:46:19.534512: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2025-07-13 18:46:19.539171: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2025-07-13 18:46:19.543222: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2025-07-13 18:46:19.543940: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2025-07-13 18:46:19.544343: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:19.544713: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:19.544792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2025-07-13 18:46:19.545085: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-07-13 18:46:19.546231: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:19.546361: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:00:00.0 name: NVIDIA Tegra X1 computeCapability: 5.3
+coreClock: 0.9216GHz coreCount: 1 deviceMemorySize: 3.87GiB deviceMemoryBandwidth: 194.55MiB/s
+2025-07-13 18:46:19.546412: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 18:46:19.546678: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2025-07-13 18:46:19.546747: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2025-07-13 18:46:19.546793: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2025-07-13 18:46:19.546938: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2025-07-13 18:46:19.546998: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2025-07-13 18:46:19.547102: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2025-07-13 18:46:19.547211: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2025-07-13 18:46:19.547520: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:19.547788: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:19.547855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2025-07-13 18:46:26.689811: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2025-07-13 18:46:26.689887: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2025-07-13 18:46:26.689914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2025-07-13 18:46:26.690476: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:26.691035: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:26.692372: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 18:46:26.693445: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 694 MB memory) -> physical GPU (device: 0, name: NVIDIA Tegra X1, pci bus id: 0000:00:00.0, compute capability: 5.3)
+2025-07-13 18:46:26.694726: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-07-13 18:47:40.079565: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 375840000 exceeds 10% of free system memory.
+2025-07-13 18:47:40.957781: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2025-07-13 18:47:40.974518: W tensorflow/core/platform/profile_utils/cpu_utils.cc:116] Failed to find bogomips or clock in /proc/cpuinfo; cannot determine CPU frequency
+2025-07-13 18:47:42.449728: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2025-07-13 18:47:46.027805: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2025-07-13 18:48:21.593359: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:21.610258: W tensorflow/stream_executor/gpu/asm_compiler.cc:55] Couldn't invoke /usr/local/cuda-10.2/bin/ptxas --version
+2025-07-13 18:48:21.813318: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:21.814590: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: Failed to launch ptxas
+Relying on driver to perform ptx compilation. 
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2025-07-13 18:48:23.469991: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:24.198682: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:24.210546: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:24.517183: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:24.534400: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:24.846033: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:24.864032: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:24.944653: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:24.957876: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:25.070563: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:25.087393: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:25.125013: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:25.137344: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:26.527570: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:26.561215: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:26.695136: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:26.699712: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.156082: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.170193: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.223840: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.235148: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.262106: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.273821: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.310715: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.322067: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.347045: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.359207: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.459514: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.472983: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.506776: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.515108: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.840392: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.852245: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.895814: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.908969: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.955596: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:27.967216: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:28.003619: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:28.015543: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:28.037759: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:28.050074: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:37.496383: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:37.826914: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.031275: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.042532: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.161126: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.173344: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.536295: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.552329: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.632122: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.644307: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.685787: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.698446: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.731985: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:38.743661: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:39.508862: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:39.529712: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:39.583110: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:39.587837: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:39.965667: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:39.978549: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.024631: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.035829: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.060386: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.072206: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.106738: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.119054: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.143253: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.153991: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.219093: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.230095: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.259637: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.263914: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.550360: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.562658: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.601432: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.613790: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.642914: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.654321: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.688109: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.701131: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.722974: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+2025-07-13 18:48:40.736090: E tensorflow/core/platform/default/subprocess.cc:212] Start cannot fork() child process: Cannot allocate memory
+✅ Cargadas 3132 imágenes de prueba
+
+✅ Inferencia completada sobre 3132 imágenes
+⏱️  Tiempo total: 62.043 s
+⏱️  Tiempo promedio por imagen: 19.809 ms
+📈 Memoria pico: 33.76 MB
+🎯 Precisión: 0.03%
+⚡ Energía estimada: 310.216 J (con 5.0W)
+Finished slrum job

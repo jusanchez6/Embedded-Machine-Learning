@@ -1,0 +1,49 @@
+Starting slrum job
+2025-07-13 22:31:39.548351: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 22:31:43.805937: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 22:31:44.436278: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2025-07-13 22:31:44.452882: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:44.453083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:00:00.0 name: NVIDIA Tegra X1 computeCapability: 5.3
+coreClock: 0.9216GHz coreCount: 1 deviceMemorySize: 3.87GiB deviceMemoryBandwidth: 194.55MiB/s
+2025-07-13 22:31:44.453131: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 22:31:44.456597: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2025-07-13 22:31:44.456802: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2025-07-13 22:31:44.459752: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2025-07-13 22:31:44.463348: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2025-07-13 22:31:44.467072: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2025-07-13 22:31:44.473075: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2025-07-13 22:31:44.473721: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2025-07-13 22:31:44.476884: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:44.477310: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:44.477396: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2025-07-13 22:31:44.477665: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-07-13 22:31:44.478865: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:44.478994: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:00:00.0 name: NVIDIA Tegra X1 computeCapability: 5.3
+coreClock: 0.9216GHz coreCount: 1 deviceMemorySize: 3.87GiB deviceMemoryBandwidth: 194.55MiB/s
+2025-07-13 22:31:44.479042: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-13 22:31:44.479258: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2025-07-13 22:31:44.479331: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2025-07-13 22:31:44.479380: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2025-07-13 22:31:44.479532: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2025-07-13 22:31:44.479594: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2025-07-13 22:31:44.479641: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2025-07-13 22:31:44.479784: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2025-07-13 22:31:44.480044: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:44.480308: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:44.480378: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2025-07-13 22:31:51.435758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2025-07-13 22:31:51.435837: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2025-07-13 22:31:51.435862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2025-07-13 22:31:51.436594: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:51.437070: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:51.437457: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:908] ARM64 does not support NUMA - returning NUMA node zero
+2025-07-13 22:31:51.437683: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 466 MB memory) -> physical GPU (device: 0, name: NVIDIA Tegra X1, pci bus id: 0000:00:00.0, compute capability: 5.3)
+2025-07-13 22:31:51.438348: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-07-13 22:31:52.691113: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2025-07-13 22:31:52.692197: W tensorflow/core/platform/profile_utils/cpu_utils.cc:116] Failed to find bogomips or clock in /proc/cpuinfo; cannot determine CPU frequency
+Latencia total: 1491.20 ms
+Memoria pico: 1.86 MB
+Precisión: 84.86%
+Finished slrum job

@@ -1,0 +1,12 @@
+Starting slrum job
+2025-07-14 14:41:19.556790: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2025-07-14 14:41:23.840453: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+
+ 
+ ============================ Resultados ================================
+
+TFLite Inference Results
+  Predicted class: 9
+  Average Latency: 0.08 ms
+  Peak Memory Usage: 0.0014 MB
+Finished slrum job
